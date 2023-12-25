@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TodoList from "../components/Todo/TodoList";
 import NewTodoForm from "../components/Commen/UI/NewTodoForm";
 import { useAppDispatch } from "../hook";
-import { addTodo } from "../store/todoSlice";
+import { fetchTodos, addNewTodo } from "../store/todoSlice";
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -17,16 +17,24 @@ const Todo = () => {
   const [text, setText] = useState("");
   const dispatch = useAppDispatch();
 
-  const addTask = () => {
-    dispatch(addTodo(text));
+  const handleAction = () => {
+    dispatch(addNewTodo(text));
     setText("");
   };
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   return (
     <div className={classes.todo}>
       <h1>Список дел</h1>
 
-      <NewTodoForm value={text} updateText={setText} handleAction={addTask} />
+      <NewTodoForm
+        value={text}
+        updateText={setText}
+        handleAction={handleAction}
+      />
       <TodoList />
     </div>
   );

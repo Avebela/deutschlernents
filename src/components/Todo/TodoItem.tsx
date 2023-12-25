@@ -1,6 +1,6 @@
 import classes from "./Todopage.module.css";
 import { useAppDispatch } from "../../hook";
-import { removeTodo, toggleComplete } from "../../store/todoSlice";
+import { deleteTodo, toggleStatus } from "../../store/todoSlice";
 
 interface TodoItemProps {
   id: string;
@@ -17,13 +17,13 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, completed, title }) => {
         type="checkbox"
         checked={completed}
         //   onClick={() => dispatch(toggleTodoComplete({ id }))}
-        onClick={() => dispatch(toggleComplete(id))}
+        onClick={() => dispatch(toggleStatus(id))}
       />
       <span>{title}</span>
       <span
         className={classes.delete}
         //    onClick={() => dispatch(removeTodo({ id }))}
-        onClick={() => dispatch(removeTodo(id))}
+        onClick={() => dispatch(deleteTodo(id))}
       >
         &times;
       </span>
