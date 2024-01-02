@@ -5,7 +5,7 @@ import { Editpost } from "./pages/Editpost";
 import { Deletepost } from "./pages/Deletepost";
 import { Singlepage } from "./pages/Singlepage";
 import { Homepage } from "./pages/Homepage";
-import { About } from "./pages/Aboutpage";
+import { FavouritesPage } from "./pages/Aboutpage";
 import { Blogpage } from "./pages/Blogpage";
 import { Todo } from "./pages/Todopage";
 import { Notfoundpage } from "./pages/Notfoundpage";
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<FavouritesPage />} />
           <Route path="about us" element={<Navigate to="/about" replace />} />
           <Route path="type" element={<Blogpage />} />
           <Route path="todo" element={<Todo />} />

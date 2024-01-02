@@ -8,7 +8,7 @@ import classes from "./Todopage.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import TodoList from "../components/Todo/TodoList";
 import NewTodoForm from "../components/Commen/UI/NewTodoForm";
-import { useAppDispatch } from "../hook";
+import { useAppDispatch } from "../hooks/hook";
 import { fetchTodos, addNewTodo } from "../store/todoSlice";
 
 const Todo = () => {

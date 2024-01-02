@@ -1,5 +1,5 @@
 import classes from "./Todopage.module.css";
-import { useAppDispatch } from "../../hook";
+import { useAppDispatch } from "../../hooks/hook";
 import { deleteTodo, toggleStatus } from "../../store/todoSlice";
 
 interface TodoItemProps {
