@@ -128,3 +128,25 @@ export interface IOwner {
   type: string;
   site_admin: boolean;
 }
+
+// export type Server = IType[];
+
+// export interface IType {
+//   id: number;
+//   name: string;
+//   isactive: boolean;
+//   createdAt: string;
+//   updatedAt: string;
+//}
+
+export type IType = {
+  id: string;
+  name: string;
+  isactive: boolean;
+};
+
+export type TypesState = {
+  list: IType[];
+  loading: boolean;
+  error: string | null;
+};

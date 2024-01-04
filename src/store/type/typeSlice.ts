@@ -47,17 +47,13 @@ export const addNewType = createAsyncThunk<
   const type = {
     name: text,
   };
-  const response = await fetch(
-    //`https://jsonplaceholder.typicode.com/todos`, {
-    `http://localhost:5000/api/type`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(type),
-    }
-  );
+  const response = await fetch(`http://localhost:5000/api/type`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(type),
+  });
   if (!response.ok) {
     return rejectWithValue("Cant add type. Server error");
   }
@@ -73,17 +69,13 @@ export const toggleStatus = createAsyncThunk<
   async function (id, { rejectWithValue, dispatch, getState }) {
     const type = getState().types.list.find((type) => type.id === id);
     if (type) {
-      const response = await fetch(
-        // `https://jsonplaceholder.typicode.com/todos/${id}`,
-        `http://localhost:5000/api/type/${id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ completed: !type.isactive }),
-        }
-      );
+      const response = await fetch(`http://localhost:5000/api/type/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ isactive: !type.isactive }),
+      });
       if (!response.ok) {
         return rejectWithValue("Cant edit status. Server error");
       }

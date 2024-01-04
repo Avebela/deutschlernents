@@ -3,7 +3,7 @@ import { useAppDispatch } from "../../hooks/hook";
 import {
   // deleteTodo,
   toggleStatus,
-} from "../../store/typeSlice";
+} from "../../store/type/typeSlice";
 
 interface TypeItemProps {
   id: string;
