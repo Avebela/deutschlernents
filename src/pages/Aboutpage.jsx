@@ -1,10 +1,10 @@
 import { useAppSelector } from "../hooks/hook";
 import React from "react";
-import { useRef } from "react";
+//import { useRef } from "react";
 
 const FavouritesPage = () => {
   const { favourites } = useAppSelector((state) => state.github);
-  const aceEditorRef = useRef();
+  //const aceEditorRef = useRef();
   if (favourites.length === 0) return <p className="text-center ">No items</p>;
 
   return (

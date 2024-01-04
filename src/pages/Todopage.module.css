@@ -19,6 +19,6 @@ li {
   cursor: pointer;
 }
 
-input:checked + span {
+/* input:checked + span {
   text-decoration: line-through;
-}
+} */

@@ -54,7 +54,7 @@ const Blogpage = () => {
         to="/type/new"
         style={{ margin: "1rem 0", display: "inline-block" }}
       >
-        <h3>Добавить новую тему карточек</h3>
+        <h2>Добавить новую тему карточек</h2>
       </Link>
       {
         // {type.map((type) => (

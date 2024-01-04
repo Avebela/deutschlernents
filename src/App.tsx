@@ -8,6 +8,7 @@ import { Homepage } from "./pages/Homepage";
 import { FavouritesPage } from "./pages/Aboutpage";
 import { Blogpage } from "./pages/Blogpage";
 import { Todo } from "./pages/Todopage";
+import { TypePage } from "./pages/TypePage";
 import { Notfoundpage } from "./pages/Notfoundpage";
 import { Layout } from "./components/Layout";
 import { Loginpage } from "./pages/Loginpage";
@@ -22,7 +23,8 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="about" element={<FavouritesPage />} />
           <Route path="about us" element={<Navigate to="/about" replace />} />
-          <Route path="type" element={<Blogpage />} />
+          <Route path="type" element={<TypePage />} />
+          {/* <Route path="type" element={<Blogpage />} /> */}
           <Route path="todo" element={<Todo />} />
           <Route path="type/:id" element={<Singlepage />} />
           <Route path="type/:id/edit" element={<Editpost />} />

@@ -33,9 +33,9 @@ const Singlepage = () => {
           <div>
             <Link to={`/type/${id}/edit`}>Изменить тему</Link>
           </div>
-          <div>
+          {/* <div>
             <Link to={`/type/${id}/delete`}>Удалить тему</Link>
-          </div>
+          </div> */}
         </>
       )}
     </div>
